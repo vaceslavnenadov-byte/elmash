@@ -1,0 +1,81 @@
+<!--
+title: Контакты
+description: Контакты ООО НПП «Электромаш»: 346441, г. Новочеркасск, ул. Полевая, 7. Телефоны, e-mail, реквизиты, схема проезда.
+nav: contacts
+-->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Навигационная цепочка"><a href="index.html">Главная</a><span aria-hidden="true">/</span><span>Контакты</span></nav>
+        <h1>Контакты</h1>
+        <p>Звоните, пишите или оставьте заявку — инженеры отдела продаж помогут подобрать оборудование.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contacts">
+        <div class="contact-cards">
+          <div class="contact-card contact-card--wide">
+            <h3>Бесплатно по России</h3>
+            <a href="tel:{{site.phoneFreeHref}}" style="font-size:26px">{{site.phoneFree}}</a>
+          </div>
+          <div class="contact-card">
+            <h3>Телефоны</h3>
+            <a href="tel:{{site.phone1Href}}">{{site.phone1}}</a>
+            <a href="tel:{{site.phone2Href}}">{{site.phone2}}</a>
+            <a href="tel:{{site.phone3Href}}">{{site.phone3}}</a>
+            <small>Телефон / факс</small>
+          </div>
+          <div class="contact-card">
+            <h3>Электронная почта</h3>
+            <a href="mailto:{{site.email}}">{{site.email}}</a>
+            <a href="mailto:{{site.email2}}">{{site.email2}}</a>
+            <small>Аттестация: <a href="mailto:{{site.attestationEmail}}" style="display:inline;font-size:inherit;font-weight:600">{{site.attestationEmail}}</a></small>
+          </div>
+          <div class="contact-card contact-card--wide">
+            <h3>Адрес</h3>
+            <p>{{site.address}}</p>
+            <small>{{site.stationCode}}</small>
+          </div>
+          <div class="contact-card contact-card--wide">
+            <h3>Мы в сети</h3>
+            <a href="{{site.vk}}" target="_blank" rel="noopener">ВКонтакте — vk.com/electromashnpp</a>
+            <a href="{{site.rusprofile}}" target="_blank" rel="noopener">Карточка компании на Rusprofile</a>
+          </div>
+        </div>
+        <div class="map">
+          <iframe title="Карта: Новочеркасск, ул. Полевая, 7" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll={{site.mapLon}}%2C{{site.mapLat}}&amp;z=16&amp;pt={{site.mapLon}}%2C{{site.mapLat}}%2Cpm2rdm"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="requisites">
+      <div class="container contacts">
+        <div class="panel">
+          <h2>Обратная связь</h2>
+          <p style="color:var(--ink-2)">Заполните форму — перезвоним в рабочее время.</p>
+          <form class="form" data-form="contacts" novalidate>
+            <label class="field"><span>Ваше имя</span><input name="name" type="text" autocomplete="name" required></label>
+            <label class="field"><span>Контактный телефон</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="+7 (___) ___-__-__" required></label>
+            <label class="field"><span>Электронная почта <i>(необязательно)</i></span><input name="email" type="email" autocomplete="email"></label>
+            <label class="field"><span>Сообщение <i>(необязательно)</i></span><textarea name="message" rows="4"></textarea></label>
+            <label class="check"><input type="checkbox" name="consent" required><span>Согласен на <a href="{{site.consent}}" target="_blank" rel="noopener">обработку персональных данных</a></span></label>
+            <button class="btn btn--primary btn--lg" type="submit">Отправить</button>
+            <p class="form__status" role="status"></p>
+          </form>
+        </div>
+        <div class="panel">
+          <h2>Реквизиты</h2>
+          <table class="requisites">
+            <tr><th>Полное наименование</th><td>{{site.legalName}} ({{site.fullName}})</td></tr>
+            <tr><th>Почтовый адрес</th><td>{{site.address}}</td></tr>
+            <tr><th>Юридический адрес</th><td>{{site.legalAddress}}</td></tr>
+            <tr><th>ИНН / КПП</th><td>{{site.inn}} / {{site.kpp}}</td></tr>
+            <tr><th>ОГРН</th><td>{{site.ogrn}}</td></tr>
+            <tr><th>Код предприятия</th><td>{{site.enterpriseCode}}</td></tr>
+            <tr><th>Железнодорожная станция</th><td>{{site.stationCode}}</td></tr>
+            <tr><th>Телефон / факс</th><td>+7 (8635) 22-53-51; 22-53-71; 22-53-50</td></tr>
+            <tr><th>E-mail</th><td><a href="mailto:{{site.email}}">{{site.email}}</a></td></tr>
+          </table>
+        </div>
+      </div>
+    </section>
